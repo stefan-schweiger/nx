@@ -17,7 +17,7 @@ export interface ExpoRunOptions {
   variant?: string;
 
   // shared between ios and android
-  device?: string;
+  device?: string | boolean;
   port: number; // default is 8081
   bundler: boolean; // default is true
   buildCache?: boolean;
