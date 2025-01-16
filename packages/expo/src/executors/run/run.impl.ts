@@ -106,6 +106,8 @@ function createRunOptions(options: ExpoRunOptions) {
     {
       if (k === 'xcodeConfiguration') {
         acc.push('--configuration', v);
+      } else if (k === "device" && v === true) {
+        acc.push('--device');
       } else if (typeof v === 'boolean') {
         // no need to pass in the flag when it is true, pass the --no-<flag> when it is false. e.g. --no-build-cache, --no-bundler
         if (v === false) {
